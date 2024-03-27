@@ -41,11 +41,11 @@ def plot_linear():
     plt.legend()
     plt.show()
 
-# Create the main window
+
 root = tk.Tk()
 root.title("Quadratic Equation Solver and Linear Equation Plotter")
 
-# Quadratic Equation Input
+
 a_label = tk.Label(root, text="Enter value of a:")
 a_label.grid(row=0, column=0, padx=10, pady=5)
 a_entry = tk.Entry(root)
@@ -70,7 +70,6 @@ result_label.grid(row=4, column=0, columnspan=2, padx=10, pady=5)
 roots_label = tk.Label(root, text="")
 roots_label.grid(row=5, column=0, columnspan=2, padx=10, pady=5)
 
-# Linear Equation Input
 equation_label = tk.Label(root, text="Enter Linear Equation (e.g., 2*x + 3):")
 equation_label.grid(row=6, column=0, padx=10, pady=5)
 equation_entry = tk.Entry(root)
@@ -81,5 +80,4 @@ plot_button.grid(row=7, column=0, columnspan=2, padx=10, pady=5)
 
 
 
-# Start the GUI main loop
 root.mainloop()
