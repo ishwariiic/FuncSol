@@ -25,13 +25,13 @@ def calculate_statistics():
     var = variance(data_list)
     st_dev = stdev(data_list)
     data_stats.config(text=f"Mean: {mean}\nMedian: {median}\nMode: {mode}\nVariance: {var}\nStandard Deviation: {st_dev}\nRange: {max(data_list) - min(data_list)}")
-    #config is used to access attributes after initialisation 
+    
 
-# Create the main window
+
 root = tk.Tk()
 root.title("Factorial Calculator and Statistics Calculator")
 
-# Factorial Calculation
+
 factorial_label = tk.Label(root, text="Enter a number to calculate factorial ")
 factorial_label.pack()
 factorial_entry = tk.Entry(root)
@@ -41,7 +41,7 @@ factorial_button.pack()
 factorial_result = tk.Label(root, text="")
 factorial_result.pack()
 
-# Statistics Calculation
+
 statistics_label = tk.Label(root, text="Enter list of values separated by space")
 statistics_label.pack()
 data_entry = tk.Entry(root, width=40)
