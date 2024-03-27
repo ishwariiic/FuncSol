@@ -28,14 +28,14 @@ def solve_lp_problem():
 root = tk.Tk()
 root.title("Linear Programming Problem Solver")
 
-# Objective Function
+
 Label(root, text="Objective Function (c):").grid(row=0, column=0)
 c_entries = [Entry(root) for _ in range(2)]
 for i, entry in enumerate(c_entries):
     entry.grid(row=0, column=i + 1)
     entry.insert(0, "0")
 
-# Constraints
+
 Label(root, text="Constraints (A):").grid(row=1, column=0)
 A_entries = []
 for i in range(2):
@@ -51,7 +51,7 @@ for i, entry in enumerate(b_entries):
     entry.grid(row=3, column=i + 1)
     entry.insert(0, "0")
 
-# Problem Type
+
 problem_type = tk.StringVar()
 problem_type.set("Minimize")
 Label(root, text="Select Problem Type:").grid(row=4, column=0)
@@ -60,11 +60,11 @@ minimize_radio.grid(row=4, column=1)
 maximize_radio = tk.Radiobutton(root, text="Maximize", variable=problem_type, value="Maximize")
 maximize_radio.grid(row=4, column=2)
 
-# Solve Button
+
 solve_button = Button(root, text="Solve", command=solve_lp_problem)
 solve_button.grid(row=5, column=0, columnspan=4)
 
-# Result
+
 Label(root, text="Optimal Solution:").grid(row=6, column=0)
 result_text = Text(root, height=6, width=30)
 result_text.grid(row=7, column=0, columnspan=4)
